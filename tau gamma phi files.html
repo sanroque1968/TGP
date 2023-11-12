@@ -1,0 +1,112 @@
+<!DOCTYPE >
+
+
+ <head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Comaptible" content="IE=edge">
+	<meta name="viewport"content="width=device-width,initial-scale=1.0">
+	<title>Tau Gamma Phi Chapter Profile </title>
+	<link rel="icon" href="favicon.ico" type= "image/x-icon">
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet"	href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+ </head>	
+ 
+
+ 
+ <section> 
+   	<video autoplay loop muted plays= "inline "class="background-clip">
+	<source src="file:///C:/Users/my%20pc/tau%20gamma/Untitled%20design.mp4" type="video/mp4">
+	</video>
+</section>
+<body>
+	    <div class="logo-area">	
+		<img src="file:///C:/Users/my%20pc/Downloads/tau.jpg.png">
+		<div class="container">
+			
+	        <h1/>San Roque Chapter Membership Profile </h1/> 	
+  	
+                <form name="submit-to-google-sheet">
+				    <div class="input-box">.
+			            <div class="input-field">
+				            <input type="text" name="FullName" placeholder="FullName" required>
+					            <i class='bx bxs-user-circle'></i>
+				            </div>
+							
+					<div class="input-box">.		
+			            <div class="input-field">
+				            <input type="text" name="Present Address" placeholder="Present Address" required>
+				                <i class='bx bxs-edit-location'></i>
+				            </div>	
+					<div class="input-box">.
+			            <div class="input-field">
+				            <input type="text" name="Contact Number" placeholder="Contact Number" required>
+					            <i class='bx bxs-user-circle'></i>
+				            </div>
+    					
+					<div class="input-box">.
+			            <div class="input-field">
+				            <input type="text" name="Date Of Birth" placeholder="Date Of Birth" required>
+				                <i class='bx bxs-edit-location'></i>
+				           
+                            </div>
+
+				<p> Information of Initiation</p>
+					<div class="input-box">.
+			            <div class="input-field">
+				            <input type="calendar" name="Date Of Initiation" placeholder="Date Of Initiation" required">
+					            <i class='bx bxs-calendar' ></i>
+				            </div>	        
+					    </div>
+						
+    	            <div class="input-box">	
+				       <div class="input-field">
+			                <input type="text" name="Name Of GT" placeholder="Name Of GT" required">
+					            <i class='bx bxs-user-circle'></i>	
+	                        </div>
+						</div>
+						
+			        <div class="input-box">	
+	                    <div class="input-field">
+			                <input type="text" name="Name Of MWW" placeholder="Name Of MWW" required">
+					            <i class='bx bxs-user-circle'></i>
+	                        </div>
+						</div>	
+						
+                <p><label for="myCheck">Welcoming:</label>  
+						    <input type="checkbox" id="myCheck" onclick="myFunction()">
+							
+                            <input id="text" style= "display:none" name="Date of Welcoming Rites"	type="text" placeholder="Date of Welcoming Rites"></p>
+				              
+ <script>
+function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script> 	
+
+                          	
+		<div class="wrapper">	                
+							
+            <input type="checkbox">
+			<label>I hereby declare that the above information provided is true and correct</label>
+		
+	        <button type="submit" id="submit" class="btn">Submit</button>
+            
+       			</form>	
+           <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwL0rG0kU_isPfokbKDXojGKMKFvAXAxTwM-NQ7d3cS4brvSp31t-7icl-kmCR0OY0dAQ/exec' 
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>	
